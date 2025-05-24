@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <title>Join Taxora.AI Waitlist | Early Access & Benefits</title>
+  <meta name="description" content="Sign up for the Taxora.AI waitlist to get early access to our AI-powered UAE tax assistant. Enjoy exclusive perks and be the first to simplify your taxes!" />
+
+  <meta property="og:title" content="Secure Your Spot – Taxora.AI Waitlist" />
+  <meta property="og:image" content="https://yourtaxoraAI.com/images/preview.png" /> 
+  <meta property="og:url" content="https://yourtaxoraAI.com/join.html" />
+  <meta property="og:site_name" content="Taxora.AI" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="assets/icons/site.webmanifest">
+  <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#00a86b">
+  <meta name="msapplication-TileColor" content="#00a86b">
+  <meta name="msapplication-config" content="assets/icons/browserconfig.xml"> <meta name="theme-color" content="#050505"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-green: #00A86B;
+      --brand-glow: #1affb3;
+      --dark-bg: #050505; 
+      --card-bg: #FFFFFF;
+      --border-color-light: #333; 
+      --text-primary-darkbg: #FFFFFF;
+      --text-primary-lightbg: #000000;
+      --text-secondary-lightbg: #555;
+      --error-bg: #ffebee;
+      --error-text: #c62828;
+      --error-border: #c62828;
+    }
+
+    * { 
+      box-sizing: border-box; 
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      color: var(--text-primary-darkbg); 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+      text-align: left;
+      background: linear-gradient(270deg, #000000, #03100c, #000000, #001f16);
+      background-size: 800% 800%; 
+      animation: GradientFlow 25s ease infinite;
+    }
+
+    @keyframes GradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body.rtl {
+      text-align: right;
+    }
+
+    .lang-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 999;
+      display: flex;
+      border: 1px solid rgba(255, 255, 255, 0.2); 
+      border-radius: 100px;
+      background: rgba(13, 13, 13, 0.7); 
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    
+    html[dir="rtl"] .lang-toggle {
+        right: auto;
+        left: 1.5rem;
+    }
+
+    .lang-toggle button {
+      background: transparent;
+      border: none;
+      padding: 8px 14px;
+      font-weight: bold;
+      color: var(--text-secondary-lightbg); /* Should be a light color for dark toggle bg */
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s ease, color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .lang-toggle button.active {
+      background: var(--text-primary-darkbg); 
+      color: var(--dark-bg); 
+    }
+
+    .lang-toggle button:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .form-container {
+      background: var(--card-bg);
+      color: var(--text-primary-lightbg);
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.25), 0 0 0 1px rgba(255, 255, 255, 0.1); 
+      border: 1px solid var(--border-color-light); 
+      max-width: 500px;
+      width: 100%;
+      transition: opacity 0.4s ease;
+    }
+    
+    .form-logo {
+      display: block;
+      height: 60px;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    h1 { 
+      margin-bottom: 0.5rem; 
+      font-size: 1.8rem; 
+      text-align: center;
+      color: var(--text-primary-lightbg);
+    }
+
+    p { 
+      margin-bottom: 2rem; 
+      font-size: 1rem; 
+      color: var(--text-secondary-lightbg);
+      text-align: center;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.85rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--brand-green);
+      box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.2);
+    }
+
+    button[type="submit"] { 
+      width: 100%;
+      padding: 0.9rem;
+      background-color: var(--brand-green);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.1s ease;
+    }
+
+    button[type="submit"]:hover { 
+      background-color: #008e59; 
+    }
+    button[type="submit"]:active {
+        transform: scale(0.98);
+        opacity: 0.9;
+    }
+
+    button[type="submit"]:disabled {
+      background-color: #555;
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    .form-feedback-message {
+      margin-top: 1rem;
+      padding: 0.85rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .form-feedback-message.error {
+      background-color: var(--error-bg);
+      color: var(--error-text);
+      border: 1px solid var(--error-border);
+    }
+     .form-feedback-message.info { 
+      background-color: #e0f2f7;
+      color: #006064;
+      border: 1px solid #4dd0e1;
+    }
+
+    #successMessage {
+      text-align: center;
+    }
+    #successMessage h2 { 
+      color: var(--brand-green);
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .form-container { padding: 2rem 1.5rem; }
+      h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="languageSwitcher" class="lang-toggle">
+    <button data-lang="en"><span>🇺🇸</span> English</button>
+    <button data-lang="ar"><span>🇦🇪</span> العربية</button>
+  </div>
+
+  <div class="form-container" id="waitlistFormContainer">
+    <img src="images/screenshots/taxoraailogo1.png" alt="Taxora.AI Logo" class="form-logo" />
+    <h1 data-i18n="title">Join the Waitlist</h1>
+    <p data-i18n="subtitle">Be the first to access the AI tax assistant built for the UAE.</p>
+    
+    <form id="waitlistForm">
+      <input type="text" name="name" data-i18n-placeholder="placeholder_name" required />
+      <input type="email" name="email" data-i18n-placeholder="placeholder_email" required />
+      
+      <select name="location" required>
+        <option value="" data-i18n="select_location" selected disabled>Select location</option>
+        <option value="Abu Dhabi" data-i18n="loc_ad">Abu Dhabi</option>
+        <option value="Dubai" data-i18n="loc_dxb">Dubai</option>
+        <option value="Sharjah" data-i18n="loc_shj">Sharjah</option>
+        <option value="Ajman" data-i18n="loc_ajm">Ajman</option>
+        <option value="Umm Al Quwain" data-i18n="loc_uaq">Umm Al Quwain</option>
+        <option value="Ras Al Khaimah" data-i18n="loc_rak">Ras Al Khaimah</option>
+        <option value="Fujairah" data-i18n="loc_fuj">Fujairah</option>
+        <option value="Other" data-i18n="loc_other">Other (Outside UAE)</option>
+      </select>
+      
+      <button type="submit" id="submitButton" data-i18n="submit_btn">Get Early Access</button>
+      <div id="formFeedback" class="form-feedback-message" style="display: none;"></div>
+    </form>
+  </div>
+
+  <div class="form-container" id="successMessage" style="display: none;">
+      <img src="images/screenshots/taxoraailogo1.png" alt="Taxora.AI Logo" class="form-logo" />
+      <h2 data-i18n="success_title">You're on the list!</h2>
+      <p data-i18n="success_subtitle">Thank you for joining. We'll be in touch soon with updates and early access details.</p>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const translations = {
+        en: {
+          // --- UPDATED MESSAGING ---
+          title: "Secure Your Early Access to Taxora.AI",
+          subtitle: "Join our exclusive waitlist! Be among the first to revolutionize UAE tax management with AI and receive special launch perks.",
+          submit_btn: "Join & Unlock Perks",
+          // --- END UPDATED MESSAGING ---
+          placeholder_name: "Full Name", 
+          placeholder_email: "Email Address", 
+          select_location: "Select your Emirate", 
+          loc_ad: "Abu Dhabi", loc_dxb: "Dubai", loc_shj: "Sharjah", loc_ajm: "Ajman", loc_uaq: "Umm Al Quwain", loc_rak: "Ras Al Khaimah", loc_fuj: "Fujairah", loc_other: "Other (Outside UAE)", 
+          submitting_btn: "Submitting...",
+          success_title: "You're on the list!", 
+          success_subtitle: "Thank you for joining. We'll be in touch soon with updates and early access details.",
+          form_error_generic: "Oops! There was a problem submitting your form. Please try again.",
+          form_error_network: "Oops! There was a network problem. Please check your connection and try again."
+        },
+        ar: {
+          // --- UPDATED MESSAGING ---
+          title: "احجز وصولك المبكر إلى تاكسورا",
+          subtitle: "انضم إلى قائمة انتظارنا الحصرية! كن من أوائل من يُحدثون ثورة في إدارة الضرائب في الإمارات بالذكاء الاصطناعي واحصل على مزايا إطلاق خاصة.",
+          submit_btn: "انضم وافتح المزايا",
+          // --- END UPDATED MESSAGING ---
+          placeholder_name: "الاسم الكامل", 
+          placeholder_email: "البريد الإلكتروني", 
+          select_location: "اختر إمارتك", 
+          loc_ad: "أبوظبي", loc_dxb: "دبي", loc_shj: "الشارقة", loc_ajm: "عجمان", loc_uaq: "أم القيوين", loc_rak: "رأس الخيمة", loc_fuj: "الفجيرة", loc_other: "أخرى (خارج الإمارات)", 
+          submitting_btn: "جارٍ الإرسال...",
+          success_title: "أنت في القائمة!", 
+          success_subtitle: "شكراً لانضمامك. سنتواصل معك قريباً بآخر التحديثات وتفاصيل الوصول المبكر.",
+          form_error_generic: "عفوًا! حدثت مشكلة أثناء إرسال النموذج. يرجى المحاولة مرة أخرى.",
+          form_error_network: "عفوًا! حدثت مشكلة في الشبكة. يرجى التحقق من اتصالك والمحاولة مرة أخرى."
+        }
+      };
+
+      const languageSwitcher = document.getElementById('languageSwitcher');
+      const formFeedback = document.getElementById('formFeedback'); 
+
+      const getCurrentLang = () => localStorage.getItem("taxoraLang") || 'en';
+
+      const showFeedback = (messageKey, type = 'error') => {
+        const lang = getCurrentLang();
+        formFeedback.textContent = translations[lang][messageKey] || messageKey; 
+        formFeedback.className = 'form-feedback-message ' + type;
+        formFeedback.style.display = 'block';
+        formFeedback.dataset.messageKey = messageKey; // Store key for re-translation if language changes
+      };
+      
+      const hideFeedback = () => {
+        formFeedback.style.display = 'none';
+        formFeedback.textContent = '';
+        formFeedback.className = 'form-feedback-message';
+        delete formFeedback.dataset.messageKey;
+      }
+
+      const applyLanguage = (lang) => {
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        document.body.classList.toggle('rtl', lang === 'ar');
+
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          const key = el.getAttribute("data-i18n");
+          if (translations[lang] && translations[lang][key]) el.innerHTML = translations[lang][key];
+        });
+        
+        document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+          const key = el.getAttribute("data-i18n-placeholder");
+          if (translations[lang][key]) el.placeholder = translations[lang][key];
+        });
+
+        languageSwitcher.querySelectorAll("button").forEach(btn => {
+          btn.classList.toggle("active", btn.dataset.lang === lang);
+        });
+        localStorage.setItem("taxoraLang", lang);
+        
+        if (formFeedback.style.display === 'block' && formFeedback.dataset.messageKey) {
+            const currentType = formFeedback.classList.contains('error') ? 'error' : (formFeedback.classList.contains('info') ? 'info' : '');
+            showFeedback(formFeedback.dataset.messageKey, currentType);
+        }
+      };
+
+      languageSwitcher.addEventListener("click", (e) => {
+        const button = e.target.closest('button');
+        if (button && button.dataset.lang) {
+            applyLanguage(button.dataset.lang);
+        }
+      });
+      
+      const form = document.getElementById('waitlistForm');
+      const submitButton = document.getElementById('submitButton');
+      const formContainer = document.getElementById('waitlistFormContainer');
+      const successMessageContainer = document.getElementById('successMessage');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        hideFeedback(); 
+        const formData = new FormData(form);
+        const lang = getCurrentLang();
+
+        submitButton.disabled = true;
+        submitButton.innerText = translations[lang].submitting_btn || "Submitting...";
+
+        fetch("https://formspree.io/f/xwpozvrw", { 
+          method: "POST",
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        }).then(response => {
+          if (response.ok) {
+            formContainer.style.display = 'none';
+            successMessageContainer.style.display = 'block';
+          } else {
+            response.json().then(data => {
+              let errorKey = 'form_error_generic';
+              if (Object.hasOwn(data, 'errors')) {
+                console.error("Formspree errors:", data.errors);
+              }
+              showFeedback(errorKey);
+            }).catch(() => {
+                showFeedback('form_error_generic');
+            });
+            submitButton.disabled = false;
+            submitButton.innerText = translations[lang].submit_btn || "Get Early Access";
+          }
+        }).catch(error => {
+          console.error("Network error:", error);
+          showFeedback('form_error_network');
+          submitButton.disabled = false;
+          submitButton.innerText = translations[lang].submit_btn || "Get Early Access";
+        });
+      });
+
+      const savedLang = localStorage.getItem("taxoraLang");
+      const browserLang = navigator.language.slice(0, 2);
+      const initialLang = savedLang ? savedLang : (['en', 'ar'].includes(browserLang) ? browserLang : 'en');
+      applyLanguage(initialLang);
+    });
+  </script>
+
+</body>
+</html>
