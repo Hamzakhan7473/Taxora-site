@@ -1,5 +1,4 @@
-<!DOCTYPE html>   <!-- Force update: May 24 -->
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -105,16 +104,25 @@
     
     .bento-section { padding: 6rem 2rem; text-align: center; }
     .bento-section h2 { font-size: 2.8rem; font-weight: 700; margin-bottom: 3rem; color: var(--text-primary); }
-    .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(220px, auto); gap: 1.5rem; max-width: 1200px; margin: auto; }
-    .bento-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.5rem; text-align: left; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(230px, auto); gap: 1.5rem; max-width: 1200px; margin: auto; }
+    .bento-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.5rem; text-align: left; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .bento-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 168, 107, 0.15); }
-    .bento-card-content { flex-grow: 1; }
+    .bento-card-content { flex-grow: 1; } 
     .bento-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--text-primary); }
-    .bento-card p { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; }
-    .bento-card-visual { margin-top: 1.5rem; flex-shrink: 0; }
+    .bento-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem; }
+    .bento-card-visual { margin-top: auto; padding-top: 1rem; flex-shrink: 0; }
     .bento-card-visual img { width: 100%; height: auto; object-fit: contain; border-radius: 8px; }
     .bento-card.col-span-2 { grid-column: span 2; }
-    
+    .bento-card.text-only-card .bento-card-content { 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100%;
+        text-align: center;
+    }
+    .bento-card.text-only-card p {font-size: 1rem;}
+
     .faq-section { padding: 4rem 2rem; text-align: center; background-color: var(--dark-bg); }
     .faq-section h2 { font-size: 2.8rem; font-weight: 700; margin-bottom: 3rem; color: var(--text-primary); }
     .faq-grid { max-width: 800px; margin: 0 auto; text-align: left; }
@@ -152,13 +160,15 @@
       .hero-content p { margin-left: auto; margin-right: auto; }
       .hero-buttons { justify-content: center; }
       .hero-image { grid-row: 1; margin-bottom: 2rem; }
-      .bento-grid { grid-template-columns: 1fr; }
-      .bento-card.col-span-2 { grid-column: span 1; }
+      .bento-grid { grid-template-columns: repeat(2, 1fr); } 
+      .bento-card.col-span-2 { grid-column: span 2; } 
       .faq-section h2, .expertise-callout h3, .trust-section h2, .cta-section h2 {font-size: 2rem;}
     }
      @media (max-width: 600px) {
        .hero-content h1 {font-size: 2.5rem;}
        .hero-content p {font-size: 1.1rem;}
+       .bento-grid { grid-template-columns: 1fr; } 
+       .bento-card.col-span-2 { grid-column: span 1; } 
        .bento-section h2, .faq-section h2, .expertise-callout h3, .trust-section h2, .cta-section h2 {font-size: 1.8rem;}
        .bento-card h3 {font-size: 1.1rem;}
        .bento-card p {font-size: 0.9rem;}
@@ -237,18 +247,6 @@
                 <div class="bento-card-content"><h3 data-i18n="feature3_title">Tax Health Dashboard</h3><p data-i18n="feature3_desc">A real-time view of your deadlines and tax health.</p></div>
                 <div class="bento-card-visual"><img src="images/screenshots/IMG_BC3797375D10-1.jpeg" alt="Tax Dashboard"></div>
             </div>
-             <div class="bento-card">
-                 <div class="bento-card-content"><h3 data-i18n="feature7_title">Proactive AI Insights</h3><p data-i18n="feature7_desc">Get alerts on unusual spending, potential savings, and compliance risks before they become problems.</p></div>
-                 <div class="bento-card-visual"><img src="images/screenshots/AI features final.jpg" alt="AI Insights"></div>
-            </div>
-             <div class="bento-card col-span-2">
-                 <div class="bento-card-content"><h3 data-i18n="feature8_title">Visualized Financials</h3><p data-i18n="feature8_desc">Go beyond numbers. Interactive charts show you exactly where your money is going and how your VAT is calculated, updated in real-time.</p></div>
-                 <div class="bento-card-visual"><img src="images/screenshots/Graphical new .jpg" alt="VAT Calculation Graph"></div>
-            </div>
-            <div class="bento-card">
-                 <div class="bento-card-content"><h3 data-i18n="feature6_title">Export-Ready Reports</h3><p data-i18n="f6desc">Generate beautiful, audit-ready summaries in PDF or Excel.</p></div>
-                 <div class="bento-card-visual"><img src="images/screenshots/IMG_79860BA9776F-1.jpeg" alt="Export Reports"></div>
-            </div>
             <div class="bento-card">
                 <div class="bento-card-content"><h3 data-i18n="feature4_title">VAT & Zakat Estimator</h3><p data-i18n="f4desc">Input your earnings and let Taxora do the math.</p></div>
                 <div class="bento-card-visual"><img src="images/screenshots/Vatcalculator.jpg" alt="VAT & Zakat Estimator"></div>
@@ -256,6 +254,32 @@
             <div class="bento-card">
                  <div class="bento-card-content"><h3 data-i18n="feature5_title">Startup Guidance</h3><p data-i18n="f5desc">License and structure advice for freelancers and startups.</p></div>
                  <div class="bento-card-visual"><img src="images/screenshots/StartupsNew.PNG" alt="Startup Guidance"></div>
+            </div>
+            <div class="bento-card">
+                 <div class="bento-card-content"><h3 data-i18n="feature6_title">Export-Ready Reports</h3><p data-i18n="f6desc">Generate beautiful, audit-ready summaries in PDF or Excel.</p></div>
+                 <div class="bento-card-visual"><img src="images/screenshots/IMG_79860BA9776F-1.jpeg" alt="Export Reports"></div>
+            </div>
+            
+            <div class="bento-card">
+                 <div class="bento-card-content"><h3 data-i18n="feature_deduction_advisor_title">AI Deduction Advisor</h3><p data-i18n="feature_deduction_advisor_desc">AI automatically flags deductible expenses to legally maximize your savings.</p></div>
+                 <div class="bento-card-visual"><img src="images/screenshots/Deduction.jpeg" alt="Deduction Advisor"></div>
+            </div>
+            <div class="bento-card"> 
+                 <div class="bento-card-content"><h3 data-i18n="feature_ct_simulator_title">Smart Corporate Tax Simulator</h3><p data-i18n="feature_ct_simulator_desc">Model business scenarios (hiring, expansion) & see instant Corporate Tax & Zakat impact.</p></div>
+                 <div class="bento-card-visual"><img src="images/screenshots/ct simulator .jpeg" alt="Corporate Tax Simulator"></div>
+            </div>
+            <div class="bento-card">
+                 <div class="bento-card-content"><h3 data-i18n="feature_freezone_title">Free Zone Optimizer</h3><p data-i18n="feature_freezone_desc">Maximize 0% CT benefits. AI checks qualifying activities & suggests license alignments.</p></div>
+                 <div class="bento-card-visual"><img src="images/screenshots/freezoneoptimizer.jpeg" alt="Free Zone Optimizer"></div>
+            </div>
+            <div class="bento-card">
+                 <div class="bento-card-content"><h3 data-i18n="feature_crossborder_title">Cross-Border Tax Checker</h3><p data-i18n="feature_crossborder_desc">Instantly understand tax implications for common international transactions.</p></div>
+                 <div class="bento-card-visual"><img src="images/screenshots/crossborder.jpeg" alt="Cross-Border Tax Checker"></div>
+            </div>
+            
+            <div class="bento-card text-only-card col-span-2"> <div class="bento-card-content">
+                    <p><strong data-i18n="trusted_ai">🧠 Trained on 1,000s of FTA documents<br>Built with UAE tax experts & compliance advisors<br>🔒 Secure & encrypted — your data stays private</strong></p>
+                 </div>
             </div>
         </div>
       </section>
@@ -279,14 +303,24 @@
             <summary data-i18n="faq4_q">What makes Taxora.AI different?</summary>
             <p data-i18n="faq4_a">Taxora.AI combines cutting-edge AI, specifically trained on UAE tax laws and FTA documents, with a user-friendly interface. We focus on providing clear, jargon-free answers, proactive insights, and seamless automation to save you time and stress.</p>
           </details>
+          <details class="faq-item">
+            <summary data-i18n="faq5_q">Can Taxora.AI help with international business?</summary>
+            <p data-i18n="faq5_a">Yes! Taxora.AI includes a Cross-Border Tax Checker to help you understand potential tax implications for common international transactions, making it ideal for businesses with global connections.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq6_q">How does Taxora.AI handle Free Zone benefits?</summary>
+            <p data-i18n="faq6_a">Our Free Zone Optimizer helps you maximize your benefits by cross-checking your activities against FTA rules for Qualifying Income (0% Corporate Tax) and can suggest license alignments for optimal compliance.</p>
+          </details>
         </div>
       </section>
+      
       <section class="expertise-callout">
         <div class="expertise-content">
           <h3 data-i18n="expertise_title">Intelligent Technology, Expertly Guided</h3>
           <p data-i18n="expertise_desc">Taxora.AI isn't just smart algorithms. Our platform is built on cutting-edge AI, extensively trained on official UAE tax legislation and FTA documentation. This technological core is continuously refined and validated in consultation with seasoned UAE tax professionals and compliance advisors, ensuring you receive accurate, reliable, and context-aware assistance.</p>
         </div>
       </section>
+      
       <section class="trust-section">
         <h2 data-i18n="trust_title">Your Security is Our Foundation</h2>
         <p data-i18n="trust_p">We understand you're trusting us with sensitive data. Our platform is architected with multi-layer security to ensure your information is always protected.</p>
@@ -313,30 +347,42 @@
       // --- Onboarding Logic ---
       let currentSlide = 0;
       const onboardingSection = document.getElementById('onboarding');
-      const slides = onboardingSection.querySelectorAll('.onboarding-slide');
-      const dots = onboardingSection.querySelectorAll('.dot');
+      const slides = onboardingSection ? onboardingSection.querySelectorAll('.onboarding-slide') : [];
+      const dots = onboardingSection ? onboardingSection.querySelectorAll('.dot') : [];
       let slideInterval;
+
       const showSlide = (index) => {
+        if (!slides.length || !dots.length) return; 
         if(index >= slides.length) index = 0;
         if(index < 0) index = slides.length - 1;
         slides.forEach((slide, i) => {
           slide.classList.remove('active');
-          dots[i].classList.remove('active');
+          if(dots[i]) dots[i].classList.remove('active');
         });
         slides[index].classList.add('active');
-        dots[index].classList.add('active');
+        if(dots[index]) dots[index].classList.add('active');
         currentSlide = index;
       };
       window.nextSlide = () => showSlide(currentSlide + 1);
       window.prevSlide = () => showSlide(currentSlide - 1);
+      
+      const mainContentElement = document.getElementById('mainContent'); 
+
       window.startApp = () => {
-        clearInterval(slideInterval);
-        onboardingSection.classList.remove('active');
-        document.getElementById('mainContent').classList.add('active');
+        if(slideInterval) clearInterval(slideInterval);
+        if(onboardingSection) onboardingSection.classList.remove('active');
+        localStorage.setItem('onboardingCompleted', 'true'); 
+        if(mainContentElement) mainContentElement.classList.add('active');
       };
       const startSlideShow = () => {
-        if (onboardingSection.classList.contains('active')) {
+        if (onboardingSection && onboardingSection.classList.contains('active') && slides.length > 0) {
+          showSlide(0); 
           slideInterval = setInterval(nextSlide, 5000);
+        } else {
+           if (mainContentElement && !mainContentElement.classList.contains('active')) {
+               if(onboardingSection) onboardingSection.classList.remove('active'); 
+               mainContentElement.classList.add('active');
+           }
         }
       };
 
@@ -362,10 +408,16 @@
           f5desc: "License and structure advice for freelancers and startups.",
           feature6_title: "Export-Ready Reports",
           f6desc: "Generate beautiful, audit-ready summaries in PDF or Excel.",
-          feature7_title: "Proactive AI Insights",
-          feature7_desc: "Get alerts on unusual spending, potential savings, and compliance risks before they become problems.",
-          feature8_title: "Visualized Financials",
-          feature8_desc: "Go beyond numbers. Interactive charts show you exactly where your money is going and how your VAT is calculated, updated in real-time.",
+          
+          feature_deduction_advisor_title: "AI Deduction Advisor",
+          feature_deduction_advisor_desc: "AI automatically flags deductible expenses to legally maximize your savings.",
+          feature_ct_simulator_title: "Smart Corporate Tax Simulator",
+          feature_ct_simulator_desc: "Model business scenarios (hiring, expansion) & see instant Corporate Tax & Zakat impact.",
+          feature_freezone_title: "Free Zone Optimizer",
+          feature_freezone_desc: "Maximize 0% CT benefits. AI checks qualifying activities & suggests license alignments.",
+          feature_crossborder_title: "Cross-Border Tax Checker",
+          feature_crossborder_desc: "Instantly understand tax implications for common international transactions.",
+          // feature_knowledge_title and _desc REMOVED
           
           faq_title: "Frequently Asked Questions",
           faq1_q: "Who is Taxora.AI for?",
@@ -376,6 +428,10 @@
           faq3_a: "We are working hard to bring Taxora.AI to you soon! We are targeting a launch in Q4 2025. Join our waitlist to be the first to know and get exclusive early access.",
           faq4_q: "What makes Taxora.AI different?",
           faq4_a: "Taxora.AI combines cutting-edge AI, specifically trained on UAE tax laws and FTA documents, with a user-friendly interface. We focus on providing clear, jargon-free answers, proactive insights, and seamless automation to save you time and stress.",
+          faq5_q: "Can Taxora.AI help with international business?",
+          faq5_a: "Yes! Taxora.AI includes a Cross-Border Tax Checker to help you understand potential tax implications for common international transactions, making it ideal for businesses with global connections.",
+          faq6_q: "How does Taxora.AI handle Free Zone benefits?",
+          faq6_a: "Our Free Zone Optimizer helps you maximize your benefits by cross-checking your activities against FTA rules for Qualifying Income (0% Corporate Tax) and can suggest license alignments for optimal compliance.",
 
           expertise_title: "Intelligent Technology, Expertly Guided",
           expertise_desc: "Taxora.AI isn't just smart algorithms. Our platform is built on cutting-edge AI, extensively trained on official UAE tax legislation and FTA documentation. This technological core is continuously refined and validated in consultation with seasoned UAE tax professionals and compliance advisors, ensuring you receive accurate, reliable, and context-aware assistance.",
@@ -388,6 +444,7 @@
           trust2_desc: "Our AI models and compliance workflows are built and validated in partnership with certified UAE tax professionals.",
           trust3_title: "🛡️ Privacy-First by Design",
           trust3_desc: "We don't see your financial data. We don't sell data. You own your information, always. Compliant with UAE data protection laws.",
+          trusted_ai: "🧠 Trained on 1,000s of FTA documents<br>Built with UAE tax experts & compliance advisors<br>🔒 Secure & encrypted — your data stays private",
           
           cta_title: "Be the First to Experience Tax-Free Peace of Mind.",
           
@@ -414,10 +471,16 @@
           f5desc: "نصائح حول الترخيص والهيكلة لأصحاب العمل الحر والشركات الناشئة.",
           feature6_title: "تقارير جاهزة للتصدير",
           f6desc: "احصل على ملخصات جاهزة للمراجعة بصيغة PDF أو Excel.",
-          feature7_title: "رؤى استباقية بالذكاء الاصطناعي",
-          feature7_desc: "احصل على تنبيهات حول الإنفاق غير العادي، والتوفير المحتمل، ومخاطر الامتثال قبل أن تصبح مشاكل.",
-          feature8_title: "تحليلات مالية مرئية",
-          feature8_desc: "تجاوز الأرقام. تظهر لك الرسوم البيانية التفاعلية أين تذهب أموالك بالضبط وكيف يتم حساب ضريبة القيمة المضافة، محدّثة في الوقت الفعلي.",
+
+          feature_deduction_advisor_title: "مستشار الخصومات الضريبية بالذكاء الاصطناعي",
+          feature_deduction_advisor_desc: "يقوم الذكاء الاصطناعي تلقائيًا بتحديد النفقات القابلة للخصم لزيادة مدخراتك بشكل قانوني.",
+          feature_ct_simulator_title: "محاكي ضريبة الشركات الذكي",
+          feature_ct_simulator_desc: "قم بمحاكاة سيناريوهات عمل مختلفة وشاهد تأثيرها الفوري على ضريبة الشركات والزكاة.",
+          feature_freezone_title: "محسِّن مزايا المناطق الحرة",
+          feature_freezone_desc: "عظّم فوائدك. يتحقق الذكاء الاصطناعي من الأنشطة المؤهلة لضريبة 0% ويقترح مواءمات الترخيص.",
+          feature_crossborder_title: "مدقق الضرائب للمعاملات عبر الحدود",
+          feature_crossborder_desc: "فهم فوري للآثار الضريبية المحتملة للمعاملات والمدفوعات الدولية الشائعة.",
+          // feature_knowledge_title and _desc REMOVED
 
           faq_title: "الأسئلة الشائعة",
           faq1_q: "لمن هو تاكسورا؟",
@@ -428,7 +491,11 @@
           faq3_a: "نحن نعمل بجد لتقديم تاكسورا لك قريبًا! نستهدف الإطلاق في الربع الرابع من عام 2025. انضم إلى قائمة الانتظار لدينا لتكون أول من يعرف وتحصل على وصول مبكر حصري.",
           faq4_q: "ما الذي يجعل تاكسورا مختلفًا؟",
           faq4_a: "يجمع تاكسورا بين أحدث تقنيات الذكاء الاصطناعي، المدربة خصيصًا على قوانين الضرائب الإماراتية ووثائق الهيئة الاتحادية للضرائب، مع واجهة سهلة الاستخدام. نركز على تقديم إجابات واضحة خالية من المصطلحات المعقدة، ورؤى استباقية، وأتمتة سلسة لتوفير وقتك وتقليل الضغط عليك.",
-
+          faq5_q: "هل يمكن لـ تاكسورا المساعدة في الأعمال التجارية الدولية؟",
+          faq5_a: "نعم! يتضمن تاكسورا مدقق ضرائب للمعاملات عبر الحدود لمساعدتك على فهم الآثار الضريبية المحتملة للمعاملات الدولية الشائعة، مما يجعله مثاليًا للشركات ذات العلاقات العالمية.",
+          faq6_q: "كيف يتعامل تاكسورا مع مزايا المناطق الحرة؟",
+          faq6_a: "يساعدك محسِّن مزايا المناطق الحرة لدينا على تعظيم فوائدك عن طريق مطابقة أنشطتك مع قواعد الهيئة الاتحادية للضرائب للدخل المؤهل (ضريبة شركات 0%) ويمكنه اقتراح مواءمات للترخيص لتحقيق الامتثال الأمثل.",
+          
           expertise_title: "تكنولوجيا ذكية، بتوجيه من الخبراء",
           expertise_desc: "تاكسورا ليس مجرد خوارزميات ذكية. منصتنا مبنية على أحدث تقنيات الذكاء الاصطناعي، وتم تدريبها بشكل مكثف على التشريعات الضريبية الرسمية في الإمارات ووثائق الهيئة الاتحادية للضرائب. يتم تحسين هذا الجوهر التكنولوجي والتحقق من صحته باستمرار بالتشاور مع متخصصي ضرائب ومستشاري امتثال إماراتيين متمرسين، مما يضمن حصولك على مساعدة دقيقة وموثوقة ومدركة للسياق.",
           
@@ -440,6 +507,7 @@
           trust2_desc: "تم بناء نماذج الذكاء الاصطناعي وسير عمل الامتثال لدينا والتحقق من صحتها بالشراكة مع متخصصي ضرائب معتمدين في دولة الإمارات.",
           trust3_title: "🛡️ الخصوصية أولاً حسب التصميم",
           trust3_desc: "نحن لا نرى بياناتك المالية. نحن لا نبيع البيانات. أنت تملك معلوماتك، دائمًا. متوافق مع قوانين حماية البيانات في الإمارات العربية المتحدة.",
+          trusted_ai: "🧠 مدرب على آلاف الوثائق من الهيئة الاتحادية للضرائب<br>تم بناؤه مع خبراء ضرائب ومستشاري امتثال في الإمارات<br>🔒 آمن ومشفّر — بياناتك تظل خاصة",
           
           cta_title: "كن أول من يختبر راحة البال الضريبية.",
           
@@ -469,9 +537,38 @@
             applyLanguage(button.dataset.lang);
         }
       });
+      
       const savedLang = localStorage.getItem("taxoraLang") || (['en', 'ar'].includes(navigator.language.slice(0, 2)) ? navigator.language.slice(0, 2) : 'en');
+      
+      const onboardingCompleted = localStorage.getItem('onboardingCompleted');
+      const mainContentEl = document.getElementById('mainContent'); 
+
+      if (onboardingSection) { 
+        if (onboardingCompleted === 'true') {
+          onboardingSection.classList.remove('active');
+          if(mainContentEl) mainContentEl.classList.add('active');
+        } else {
+          onboardingSection.classList.add('active');
+          if(mainContentEl) mainContentEl.classList.remove('active');
+          startSlideShow(); 
+        }
+      } else { 
+         if(mainContentEl) mainContentEl.classList.add('active');
+      }
       applyLanguage(savedLang);
-      startSlideShow(); // Initialize Onboarding
+
+      const originalStartApp = window.startApp;
+      window.startApp = () => {
+          if(typeof originalStartApp === 'function') {
+            originalStartApp(); 
+          } else { 
+            if(slideInterval) clearInterval(slideInterval);
+            if(onboardingSection) onboardingSection.classList.remove('active');
+            if(mainContentEl) mainContentEl.classList.add('active');
+          }
+          localStorage.setItem('onboardingCompleted', 'true');
+      };
+
     });
   </script>
 </body>
