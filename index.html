@@ -151,9 +151,35 @@
     .cta-section { padding: 8rem 2rem; text-align: center; }
     .cta-section h2 { font-size: 3rem; font-weight: 700; max-width: 700px; margin: 0 auto 1.5rem auto; color: var(--text-primary); }
     
-    footer { padding: 3rem 1rem; font-size: 0.9rem; background-color: #030303; border-top: 1px solid var(--border-color-light); color: var(--text-secondary); text-align: center; }
-    footer a { color: var(--brand-green); text-decoration: none; margin: 0 8px; }
-    footer a:hover { color: var(--brand-glow); }
+    /* --- UPDATED FOOTER CSS for better link spacing --- */
+    footer { 
+      padding: 3rem 1rem; 
+      font-size: 0.9rem; 
+      background-color: #030303; 
+      border-top: 1px solid var(--border-color-light); 
+      color: var(--text-secondary); 
+      text-align: center; 
+    }
+    footer p { /* Target the paragraph within the footer */
+        font-size: 0.9rem; /* Match footer font-size */
+        color: var(--text-secondary);
+        margin-bottom: 0; /* Remove default p margin */
+        line-height: 1.5; /* Adjust line height if needed */
+    }
+    footer p a { /* Target links specifically within the footer paragraph */
+      color: var(--brand-green); 
+      text-decoration: none; 
+      margin: 0 5px; /* Adjust horizontal margin */
+    }
+    footer p a:hover { 
+      color: var(--brand-glow); 
+      text-decoration: underline;
+    }
+    footer p span { /* For the copyright text */
+        margin-right: 5px;
+    }
+    /* If you add more items to the footer p, they'll need separators or more margin */
+
 
     @media (max-width: 900px) {
       .hero-section { grid-template-columns: 1fr; text-align: center; padding: 6rem 2rem 3rem; }
@@ -277,7 +303,8 @@
                  <div class="bento-card-visual"><img src="images/screenshots/crossborder.jpeg" alt="Cross-Border Tax Checker"></div>
             </div>
             
-            <div class="bento-card text-only-card col-span-2"> <div class="bento-card-content">
+            <div class="bento-card text-only-card col-span-2"> 
+                 <div class="bento-card-content">
                     <p><strong data-i18n="trusted_ai">🧠 Trained on 1,000s of FTA documents<br>Built with UAE tax experts & compliance advisors<br>🔒 Secure & encrypted — your data stays private</strong></p>
                  </div>
             </div>
@@ -337,9 +364,13 @@
       </section>
     </main>
     <footer>
-      <p><span data-i18n="footer_copyright">© 2025 Taxora.AI. All rights reserved.</span><a href="legal.html" data-i18n="footer_legal">Privacy Policy & Terms</a></p>
+      <p>
+        <span data-i18n="footer_copyright">© 2025 Taxora.AI. All rights reserved.</span>
+        <a href="about.html" data-i18n="footer_about">About Us</a> | 
+        <a href="legal.html" data-i18n="footer_legal">Privacy Policy & Terms</a>
+      </p>
     </footer>
-  </div>
+    </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -417,7 +448,7 @@
           feature_freezone_desc: "Maximize 0% CT benefits. AI checks qualifying activities & suggests license alignments.",
           feature_crossborder_title: "Cross-Border Tax Checker",
           feature_crossborder_desc: "Instantly understand tax implications for common international transactions.",
-          // feature_knowledge_title and _desc REMOVED
+          // feature_knowledge_title and _desc REMOVED as per last request
           
           faq_title: "Frequently Asked Questions",
           faq1_q: "Who is Taxora.AI for?",
@@ -449,6 +480,7 @@
           cta_title: "Be the First to Experience Tax-Free Peace of Mind.",
           
           footer_copyright: "© 2025 Taxora.AI. All rights reserved.",
+          footer_about: "About Us", // <-- NEWLY ADDED
           footer_legal: "Privacy Policy & Terms"
         },
         ar: {
@@ -512,6 +544,7 @@
           cta_title: "كن أول من يختبر راحة البال الضريبية.",
           
           footer_copyright: "© ٢٠٢٥ تاكسورا. جميع الحقوق محفوظة.",
+          footer_about: "من نحن", // <-- NEWLY ADDED
           footer_legal: "سياسة الخصوصية والشروط"
         }
       };
